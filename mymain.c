@@ -42,5 +42,10 @@ void  ChildProcess(void)
 
 void  ParentProcess(void)
 {
-     wait(NULL);
+     pid_t childpid1 = wait(NULL);
+     printf("Child Pid: %d has completed\n", childpid1);
+     
+     pid_t childpid2 = wait(NULL);
+     printf("Child Pid: %d has completed\n", childpid2);
+     
 }
